@@ -6,9 +6,7 @@ from time import sleep
 from colorama import Fore,Style
 from user_agent import generate_user_agent
 
-# Not responsible for any improper use of this program !
-# FREE Tool By @O0Dev (Telegram channel)
-# All rights reserved for @O0Dev (Telegram channel) 2022 | Coder : Osama A.M.Y 
+
 
 class IGBoxO0Dev():
     def __init__(self):
@@ -65,27 +63,27 @@ class IGBoxO0Dev():
         while True:
             os.system('cls' if os.name == 'nt' else 'clear')
             print(self.bb)
-            print(f'{self.b1}{self.b3}{self.b2}{self.b0} Coded By Osama A.M.Y || Tele {self.t}')
+            print(f'{self.b1}{self.b3}{self.b2}{self.b0} Coded By Osama A.M.Y || Telegram: {self.t}')
             print('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
             print(f"""
-{self.b1}1{self.b2}{self.b0} Start Report [Profile]
+{self.b1}1{self.b2}{self.b0} Şikayet Başlat [Profil]
 {self.b1}2{self.b2}{self.b0} Auto Follow User From list
-{self.b1}3{self.b2}{self.b0} Auto Comment
-{self.b1}4{self.b2}{self.b0} Auto Watch Stories
-{self.b1}5{self.b2}{self.b0} Auto Instagram Post
-{self.b1}6{self.b2}{self.b0} Get Users From Words
-{self.b1}7{self.b2}{self.b0} Get Users From User
-{self.b1}8{self.b2}{self.b0} Delete Following
-{self.b1}9{self.b2}{self.b0} Delete Posts
-{self.b1}10{self.b2}{self.b0} Delete chat
-{self.b1}11{self.b2}{self.b0} Cheack Email Linked
-{self.b1}12{self.b2}{self.b0} Get Public email
-{self.b1}13{self.b2}{self.b0} Switch Accounts type
-{self.b1}14{self.b2}{self.b0} Change Password From list
-{self.b1}15{self.b2}{self.b0} Sort Combo
-{self.b1}16{self.b2}{self.b0} Increase real followers
-{self.b1}17{self.b2}{self.b0} Post a New Note 
-{self.b1}99{self.b2}{self.b0} exit
+{self.b1}3{self.b2}{self.b0} Otomatik Yorum
+{self.b1}4{self.b2}{self.b0} Otomatik Hikayeleri İzle
+{self.b1}5{self.b2}{self.b0} Otomatik İnstagram Post Paylaş
+{self.b1}6{self.b2}{self.b0} Kelimelerden Kullanıcı Getir
+{self.b1}7{self.b2}{self.b0} Kullanıcıdan Kullanıcılar Getir
+{self.b1}8{self.b2}{self.b0} Takip Edilenleri Sil
+{self.b1}9{self.b2}{self.b0} Gönderleri Sil
+{self.b1}10{self.b2}{self.b0} Sohbetleri Sil
+{self.b1}11{self.b2}{self.b0} Bağlantılı E-postayı Kontrol Et
+{self.b1}12{self.b2}{self.b0} Herkese Açık E-posta Alın
+{self.b1}13{self.b2}{self.b0} Hesap Türünü Değiştir
+{self.b1}14{self.b2}{self.b0} Şifreyi Listeden Değiştir
+{self.b1}15{self.b2}{self.b0} Combo'yu Sırala
+{self.b1}16{self.b2}{self.b0} Gerçek Takipçileri Artırın
+{self.b1}17{self.b2}{self.b0} Yeni Not Gönder 
+{self.b1}99{self.b2}{self.b0} Çıkış
         """)
             tool = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Enter Num of Tool > ')
             if tool == '1':
@@ -123,11 +121,11 @@ class IGBoxO0Dev():
             elif tool == '17':
                 self.post_note()
             elif tool == '99':
-                print(f'{self.b1}{self.b3}{self.b2}{self.b0} I wish u a happy day :)')
+                print(f'{self.b1}{self.b3}{self.b2}{self.b0} Yine bekleriz :)')
                 sleep(3)
                 exit()
             else:
-                print(f'{self.b1}{self.b4}{self.b2}{self.b0} Bad Number')
+                print(f'{self.b1}{self.b4}{self.b2}{self.b0} Yanlış Numara')
                 sleep(1.5)
                 IGBoxO0Dev().HomeScreen()
 
@@ -167,7 +165,7 @@ class IGBoxO0Dev():
         if 'userId' in login.text:
             logincookies = login.cookies
             return logincookies
-            # FREE Tool By @O0Dev (Telegram channel)
+          
 
         elif 'challenge_required' in login.text:
             loginjson = login.json()
@@ -182,11 +180,11 @@ class IGBoxO0Dev():
                 elif ('phone_number') in Secure['step_data']:
                     mode.append('[0] Phone')
                 else:
-                    print(f'{self.b1}{self.b4}{self.b2}{self.b0} Error, Try Again')
+                    print(f'{self.b1}{self.b4}{self.b2}{self.b0} Hata, Try Again')
                     sleep(3)
                     IGBoxO0Dev().HomeScreen()
             except:
-                print(f'{self.b1}{self.b4}{self.b2}{self.b0} Error, Try Again')
+                print(f'{self.b1}{self.b4}{self.b2}{self.b0} Hata, Try Again')
                 sleep(3)
                 IGBoxO0Dev().HomeScreen()
 
@@ -202,7 +200,7 @@ class IGBoxO0Dev():
 
             Send_Mode = requests.post(url_api, headers=head, data=SecureData, cookies=logincookies).json()
             Contact = Send_Mode['step_data']['contact_point']
-            print(f'{self.b1}{self.b3}{self.b2}{self.b0} Done Sending The Code To » {Contact}')
+            print(f'{self.b1}{self.b3}{self.b2}{self.b0} Başarılı Sending The Code To » {Contact}')
             myCode = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Enter Your Code : ')
             CodeData = {
                 'security_code': myCode,
@@ -214,12 +212,12 @@ class IGBoxO0Dev():
             if 'logged_in_user' in Send_Code:
                 return logincookies
             else:
-                print(f'{self.b1}{self.b4}{self.b2}{self.b0} Error Code')
+                print(f'{self.b1}{self.b4}{self.b2}{self.b0} Hata Code')
                 sleep(3)
                 IGBoxO0Dev().HomeScreen()
 
         else:
-            print(f'{self.b1}{self.b4}{self.b2}{self.b0} Error in Login with ur Account')
+            print(f'{self.b1}{self.b4}{self.b2}{self.b0} Hata in Login with ur Account')
             print(login.text)
             sleep(3)
             IGBoxO0Dev().HomeScreen()
@@ -246,8 +244,8 @@ class IGBoxO0Dev():
 
         special_users = ['r6r9','o.7a','oo']
 
-        username = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Enter UserName : ')
-        password = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Enter Password : ')
+        username = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Kullanıcı Adı Giriniz : ')
+        password = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Şifre Giriniz : ')
         
         login = IGBoxO0Dev().Insta_login(username,password)
 
@@ -264,16 +262,16 @@ class IGBoxO0Dev():
 
             reportType = input(f"""
 {self.b1}1{self.b2}{self.b0} Spam
-{self.b1}2{self.b2}{self.b0} Suicide Or Self Injury
-{self.b1}3{self.b2}{self.b0} Sale Of Illegal Goods
-{self.b1}4{self.b2}{self.b0} Scam Or Fraud
-{self.b1}5{self.b2}{self.b0} Nudity Or Pornography
-{self.b1}6{self.b2}{self.b0} Violence Or Dangerous Activity
-{self.b1}7{self.b2}{self.b0} Hate Speech
-{self.b1}8{self.b2}{self.b0} Bullying
-{self.b1}99{self.b2}{self.b0} Back to Home Screen
+{self.b1}2{self.b2}{self.b0} İntihar Veya Kendine Yaralanma
+{self.b1}3{self.b2}{self.b0} Yasadışı Malların Satışı
+{self.b1}4{self.b2}{self.b0} Dolandırıcılık
+{self.b1}5{self.b2}{self.b0} Çıplaklık Ve Pornografi
+{self.b1}6{self.b2}{self.b0} Şiddet Veya Tehlikeli Faaliyet
+{self.b1}7{self.b2}{self.b0} Nefret Söylemi
+{self.b1}8{self.b2}{self.b0} Zorbalık
+{self.b1}99{self.b2}{self.b0} Ana Ekrana Geri Dön
 
-{self.b1}{self.b5}{self.b2}{self.b0} Enter Report type : """)
+{self.b1}{self.b5}{self.b2}{self.b0} Şikayet türünü seç : """)
 
             if reportType == '1':
                 reportis = 1
@@ -298,7 +296,7 @@ class IGBoxO0Dev():
             os.system('cls' if os.name == 'nt' else 'clear')
             print(self.bb)
 
-            Target = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Enter Target : ')
+            Target = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Şikayet Edilecek Profil : ')
             if str(Target) in special_users:
                 sleep(3)
                 IGBoxO0Dev().HomeScreen()
@@ -308,12 +306,12 @@ class IGBoxO0Dev():
             try:
                 idd = IGBoxO0Dev().get_id(Target)
             except:
-                print(f'{self.b1}{self.b4}{self.b2}{self.b0} Error in find @{Target} on instagram')
+                print(f'{self.b1}{self.b4}{self.b2}{self.b0} @{Target} instagramda bulunamadı')
                 sleep(3)
                 IGBoxO0Dev().HomeScreen()
 
             try:
-                num_Report = int(input(f'{self.b1}{self.b5}{self.b2}{self.b0} Enter Number of Report : '))
+                num_Report = int(input(f'{self.b1}{self.b5}{self.b2}{self.b0} Şikayet Numarasını Girin : '))
             except:
                 num_Report = 10
 
@@ -338,33 +336,33 @@ class IGBoxO0Dev():
                         self.m +=1
                         sleep(2)
                         os.system('cls' if os.name == 'nt' else 'clear')
-                        print(f'{self.bb}\n{self.b1}{self.b5}{self.b2}{self.b0} Done : {self.m}\n{self.b1}{self.b5}{self.b2}{self.b0} Bad : {self.n}')
+                        print(f'{self.bb}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarılı : {self.m}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarısız : {self.n}')
                     elif start.status_code == 404:
                         os.system('cls' if os.name == 'nt' else 'clear')
                         print(self.bb)
-                        print(f'{self.b1}{self.b3}{self.b2}{self.b0} Account @{Target} Banned successfuly') 
+                        print(f'{self.b1}{self.b3}{self.b2}{self.b0} Account @{Target} Hesap başarıyla kapatıldı') 
                         sleep(10)
                         IGBoxO0Dev().HomeScreen()
                     else:
                         os.system('cls' if os.name == 'nt' else 'clear')
                         print(self.bb)
-                        print(f'{self.b1}{self.b4}{self.b2}{self.b0} Account Action Blocked, Please wait')
+                        print(f'{self.b1}{self.b4}{self.b2}{self.b0} Hesap İşlemi Engellendi, Lütfen bekleyin')
                         sleep(300)
                 except:
                     self.n +=1
                     
-                    print(f'{self.bb}\n{self.b1}{self.b5}{self.b2}{self.b0} Done : {self.m}\n{self.b1}{self.b5}{self.b2}{self.b0} Bad : {self.n}')
+                    print(f'{self.bb}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarılı : {self.m}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarısız : {self.n}')
 
     def Auto_follow(self):
         os.system('cls' if os.name == 'nt' else 'clear')
         print(self.bb)
 
-        target = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Enter Target : ')
+        target = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Hedef kullanıcı adı giriniz : ')
 
         try:
             accs = open('accounts.txt','r').read().splitlines()
         except:
-            print(f'{self.b1}{self.b4}{self.b2}{self.b0} accounts.txt Not Found here')
+            print(f'{self.b1}{self.b4}{self.b2}{self.b0} accounts.txt Dosyası Bulunamadı')
             sleep(3)
             IGBoxO0Dev().HomeScreen()
 
@@ -405,32 +403,32 @@ class IGBoxO0Dev():
                 if '"status":"ok"' in follow:
                     self.a +=1
                     os.system('cls' if os.name == 'nt' else 'clear')
-                    print(f'{self.bb}\n{self.b1}{self.b5}{self.b2}{self.b0} Done : {self.a}\n{self.b1}{self.b5}{self.b2}{self.b0} Bad : {self.b}\n{self.b1}{self.b5}{self.b2}{self.b0} Bad Acc : {self.c}\n{self.b1}{self.b5}{self.b2}{self.b0} Error : {self.d}')
+                    print(f'{self.bb}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarılı : {self.a}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarısız : {self.b}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarısız Acc : {self.c}\n{self.b1}{self.b5}{self.b2}{self.b0} Hata : {self.d}')
                 else:
                     self.b +=1
                     os.system('cls' if os.name == 'nt' else 'clear')
-                    print(f'{self.bb}\n{self.b1}{self.b5}{self.b2}{self.b0} Done : {self.a}\n{self.b1}{self.b5}{self.b2}{self.b0} Bad : {self.b}\n{self.b1}{self.b5}{self.b2}{self.b0} Bad Acc : {self.c}\n{self.b1}{self.b5}{self.b2}{self.b0} Error : {self.d}')
+                    print(f'{self.bb}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarılı : {self.a}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarısız : {self.b}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarısız Acc : {self.c}\n{self.b1}{self.b5}{self.b2}{self.b0} Hata : {self.d}')
             except:
                 self.d +=1
                 os.system('cls' if os.name == 'nt' else 'clear')
-                print(f'{self.bb}\n{self.b1}{self.b5}{self.b2}{self.b0} Done : {self.a}\n{self.b1}{self.b5}{self.b2}{self.b0} Bad : {self.b}\n{self.b1}{self.b5}{self.b2}{self.b0} Bad Acc : {self.c}\n{self.b1}{self.b5}{self.b2}{self.b0} Error : {self.d}')
+                print(f'{self.bb}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarılı : {self.a}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarısız : {self.b}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarısız Acc : {self.c}\n{self.b1}{self.b5}{self.b2}{self.b0} Hata : {self.d}')
         else:
             self.c +=1
             os.system('cls' if os.name == 'nt' else 'clear')
-            print(f'{self.bb}\n{self.b1}{self.b5}{self.b2}{self.b0} Done : {self.a}\n{self.b1}{self.b5}{self.b2}{self.b0} Bad : {self.b}\n{self.b1}{self.b5}{self.b2}{self.b0} Bad Acc : {self.c}\n{self.b1}{self.b5}{self.b2}{self.b0} Error : {self.d}')
+            print(f'{self.bb}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarılı : {self.a}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarısız : {self.b}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarısız Acc : {self.c}\n{self.b1}{self.b5}{self.b2}{self.b0} Hata : {self.d}')
             sleep(3)
 
     def Auto_comment(self):
         os.system('cls' if os.name == 'nt' else 'clear')
         print(self.bb)
 
-        target = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Enter Post Link : ')
+        target = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Gönderi Linkini Giriniz : ')
         post = f'{target}?__a=1&__d=dis'
 
         try:
             accs = open('accounts.txt','r').read().splitlines()
         except:
-            print(f'{self.b1}{self.b4}{self.b2}{self.b0} accounts.txt Not Found here')
+            print(f'{self.b1}{self.b4}{self.b2}{self.b0} accounts.txt Dosyası Bulunamadı')
             sleep(3)
             self.HomeScreen()
 
@@ -463,8 +461,8 @@ class IGBoxO0Dev():
                 "x-requested-with": "XMLHttpRequest"
             }
             x = requests.get(post,headers=head).json()
-            post_id = int(x['items'][0]['pk']) # FREE Tool By @O0Dev (Telegram channel)
-            comment_text = input(f'{self.b1}{self.b4}{self.b2}{self.b0} Enter The Comment : ')
+            post_id = int(x['items'][0]['pk']) 
+            comment_text = input(f'{self.b1}{self.b4}{self.b2}{self.b0} Yazılacak Yorumu Giriniz : ')
 
             url_post = f"https://www.instagram.com/web/comments/{post_id}/add/"
 
@@ -493,22 +491,22 @@ class IGBoxO0Dev():
                     response = requests.request("POST", url_post, headers=headers, data=f"comment_text={comment_text}&replied_to_comment_id=".encode('utf-8'))
                     if response.status_code == 200:
                         self.a +=1
-                        print(f'{self.bb}\n{self.b1}{self.b5}{self.b2}{self.b0} Done : {self.a}\n{self.b1}{self.b5}{self.b2}{self.b0} Bad : {self.b}\n{self.b1}{self.b5}{self.b2}{self.b0} Error : {self.c}')
+                        print(f'{self.bb}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarılı : {self.a}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarısız : {self.b}\n{self.b1}{self.b5}{self.b2}{self.b0} Hata : {self.c}')
                         sleep(6)
                     else:
                         self.b +=1
-                        print(f'{self.bb}\n{self.b1}{self.b5}{self.b2}{self.b0} Done : {self.a}\n{self.b1}{self.b5}{self.b2}{self.b0} Bad : {self.b}\n{self.b1}{self.b5}{self.b2}{self.b0} Error : {self.c}')
+                        print(f'{self.bb}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarılı : {self.a}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarısız : {self.b}\n{self.b1}{self.b5}{self.b2}{self.b0} Hata : {self.c}')
                         sleep(3)
                 except:
                     self.c +=1
-                    print(f'{self.bb}\n{self.b1}{self.b5}{self.b2}{self.b0} Done : {self.a}\n{self.b1}{self.b5}{self.b2}{self.b0} Bad : {self.b}\n{self.b1}{self.b5}{self.b2}{self.b0} Error : {self.c}')
+                    print(f'{self.bb}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarılı : {self.a}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarısız : {self.b}\n{self.b1}{self.b5}{self.b2}{self.b0} Hata : {self.c}')
                     sleep(3)
 
     def Auto_stories(self):
         os.system('cls' if os.name == 'nt' else 'clear')
         print(self.bb)
-        user = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Enter Ur UserName : ')
-        pasw = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Enter Ur Password : ')
+        user = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Kullanıcı Adı Giriniz : ')
+        pasw = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Şifre Giriniz : ')
         login = IGBoxO0Dev().Insta_login(user,pasw)
 
         coo = login.get_dict()
@@ -518,16 +516,16 @@ class IGBoxO0Dev():
         os.system('cls' if os.name == 'nt' else 'clear')
         print(self.bb)
         print(f"""
-{self.b1}1{self.b2}{self.b0} Watch From list
-{self.b1}2{self.b2}{self.b0} Watch My Following Stories
-{self.b1}3{self.b2}{self.b0} Watch From random IG Users
+{self.b1}1{self.b2}{self.b0} Listeden İzle
+{self.b1}2{self.b2}{self.b0} Takip Ettikleri Hikayelerimi İzle
+{self.b1}3{self.b2}{self.b0} Rastgele IG Kullanıcılarından İzle
         """)
-        what = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Enter Num of ur option > ')
+        what = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Hangisini Çalıştırayım > ')
         if what == '1':
             try:
                 file = open('story.txt','r').read().splitlines()
             except:
-                print(f'{self.b1}{self.b5}{self.b2}{self.b0} Error in open story.txt file')
+                print(f'{self.b1}{self.b5}{self.b2}{self.b0} Hata: story.txt dosyası açılamadı')
                 sleep(3)
                 IGBoxO0Dev().HomeScreen()
 
@@ -581,12 +579,12 @@ class IGBoxO0Dev():
                         if xxx == 200:
                             self.s +=1
                             os.system('cls' if os.name == 'nt' else 'clear')
-                            print(f'{self.bb}\n{self.b1}{self.b5}{self.b2}{self.b0} Done : {self.s}\n{self.b1}{self.b5}{self.b2}{self.b0} Bad : {hn}')
+                            print(f'{self.bb}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarılı : {self.s}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarısız : {hn}')
                             sleep(6)
                         else:
                             hn +=1
                             os.system('cls' if os.name == 'nt' else 'clear')
-                            print(f'{self.bb}\n{self.b1}{self.b5}{self.b2}{self.b0} Done : {self.s}\n{self.b1}{self.b5}{self.b2}{self.b0} Bad : {hn}')
+                            print(f'{self.bb}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarılı : {self.s}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarısız : {hn}')
                 except:
                     continue
         elif what == '2':
@@ -663,12 +661,12 @@ class IGBoxO0Dev():
                         if xxx == 200:
                             self.s +=1
                             os.system('cls' if os.name == 'nt' else 'clear')
-                            print(f'{self.bb}\n{self.b1}{self.b5}{self.b2}{self.b0} Done : {self.s}\n{self.b1}{self.b5}{self.b2}{self.b0} Bad : {hn}')
+                            print(f'{self.bb}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarılı : {self.s}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarısız : {hn}')
                             sleep(6)
                         else:
                             hn +=1
                             os.system('cls' if os.name == 'nt' else 'clear')
-                            print(f'{self.bb}\n{self.b1}{self.b5}{self.b2}{self.b0} Done : {self.s}\n{self.b1}{self.b5}{self.b2}{self.b0} Bad : {hn}')
+                            print(f'{self.bb}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarılı : {self.s}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarısız : {hn}')
                 except:
                     continue
         else:
@@ -728,12 +726,12 @@ class IGBoxO0Dev():
                             if xxx == 200:
                                 self.s +=1
                                 os.system('cls' if os.name == 'nt' else 'clear')
-                                print(f'{self.bb}\n{self.b1}{self.b5}{self.b2}{self.b0} Done : {self.s}\n{self.b1}{self.b5}{self.b2}{self.b0} Bad : {hn}')
+                                print(f'{self.bb}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarılı : {self.s}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarısız : {hn}')
                                 sleep(6)
                             else:
                                 hn +=1
                                 os.system('cls' if os.name == 'nt' else 'clear')
-                                print(f'{self.bb}\n{self.b1}{self.b5}{self.b2}{self.b0} Done : {self.s}\n{self.b1}{self.b5}{self.b2}{self.b0} Bad : {hn}')
+                                print(f'{self.bb}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarılı : {self.s}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarısız : {hn}')
                     except:
                         continue
         
@@ -777,7 +775,7 @@ class IGBoxO0Dev():
                 upload_id = json_data['upload_id']
 
                 if json_data["status"] == "ok":
-                    url = "https://www.instagram.com/create/configure/" # FREE Tool By @O0Dev (Telegram channel)
+                    url = "https://www.instagram.com/create/configure/" # Telegram @shadoarsivim
 
                     payload = 'upload_id=' + upload_id + '&caption=' + caption + '&usertags=&custom_accessibility_caption=&retry_timeout='
                     headers = {
@@ -806,20 +804,20 @@ class IGBoxO0Dev():
                     if json_data["status"] == "ok":
                         self.p +=1
                         os.system('cls' if os.name == 'nt' else 'clear')
-                        print(f'{self.bb}\n{self.b1}{self.b5}{self.b2}{self.b0} Done : {self.p}\n{self.b1}{self.b5}{self.b2}{self.b0} Bad : {hn}')
+                        print(f'{self.bb}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarılı : {self.p}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarısız : {hn}')
                         sleep(10)
                     else:
                         hn +=1
                         os.system('cls' if os.name == 'nt' else 'clear')
-                        print(f'{self.bb}\n{self.b1}{self.b5}{self.b2}{self.b0} Done : {self.p}\n{self.b1}{self.b5}{self.b2}{self.b0} Bad : {hn}')
+                        print(f'{self.bb}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarılı : {self.p}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarısız : {hn}')
 
                 else:
                     hn +=1
                     os.system('cls' if os.name == 'nt' else 'clear')
-                    print(f'{self.bb}\n{self.b1}{self.b5}{self.b2}{self.b0} Done : {self.p}\n{self.b1}{self.b5}{self.b2}{self.b0} Bad : {hn}')
+                    print(f'{self.bb}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarılı : {self.p}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarısız : {hn}')
                     sleep(10)
         except:
-            print(f'{self.b1}{self.b4}{self.b2}{self.b0} Some Errors !!')
+            print(f'{self.b1}{self.b4}{self.b2}{self.b0} Some Hatas !!')
             sleep(3)
             IGBoxO0Dev().HomeScreen()
 
@@ -860,7 +858,7 @@ class IGBoxO0Dev():
             sleep(4)
             IGBoxO0Dev().HomeScreen()
         else:
-            print(f'{self.b1}{self.b4}{self.b2}{self.b0} Error !!, Try Again later')
+            print(f'{self.b1}{self.b4}{self.b2}{self.b0} Hata !!, Try Again later')
             sleep(4)
             IGBoxO0Dev().HomeScreen()
         
@@ -881,7 +879,7 @@ class IGBoxO0Dev():
                 user = ig['user']['username']
                 file = open('user_word.txt','a').write(f'{user}\n')
             users = len(open('user_word.txt','r').read().splitlines())
-        print(f'{self.b1}{self.b3}{self.b2}{self.b0} Done Save {users} in user_user.txt')
+        print(f'{self.b1}{self.b3}{self.b2}{self.b0} Başarılı Save {users} in user_user.txt')
         sleep(3)
     
     def users_user(self):
@@ -936,7 +934,7 @@ class IGBoxO0Dev():
             print(f'{self.b1}{self.b4}{self.b2}{self.b0} Private Account')
             IGBoxO0Dev().HomeScreen()
 
-        print(f'[-] Done Save {users} in user_user.txt')
+        print(f'[-] Başarılı Save {users} in user_user.txt')
         sleep(3)
     
     def del_flow(self):
@@ -982,17 +980,17 @@ class IGBoxO0Dev():
                     'x-instagram-ajax': '753ce878cd6d',
                     'x-requested-with': 'XMLHttpRequest'}
                 
-                done = requests.post(url,headers=hed1)
+                Başarılı = requests.post(url,headers=hed1)
                 
-                if '"status":"ok"' in done.text:
+                if '"status":"ok"' in Başarılı.text:
                     print(f'{self.b1}{self.b3}{self.b2}{self.b0} Deleted username => {foou} || Sleep (16) Seconds')
                     sleep(16)
-                elif 'Please' in done.text:
+                elif 'Please' in Başarılı.text:
                     print(f'{self.b1}{self.b4}{self.b2}{self.b0} Banned !!')
                 else:
                     IGBoxO0Dev().HomeScreen()
 
-            except IndexError:
+            except IndexHata:
                 print(f'{self.b1}{self.b4}{self.b2}{self.b0} No Accounts yet')
                 sleep(4)
                 IGBoxO0Dev().HomeScreen()
@@ -1043,13 +1041,13 @@ class IGBoxO0Dev():
                 
                 dlete = requests.post(urld,headers=hed1)
                 if '"status":"ok"' in dlete.text:
-                    print(f'{self.b1}{self.b3}{self.b2}{self.b0} Deleted Done {alll} || Sleep (16) Seconds')
+                    print(f'{self.b1}{self.b3}{self.b2}{self.b0} Deleted Başarılı {alll} || Sleep (16) Seconds')
                     sleep(16)
                 else:
                     print(f'{self.b1}{self.b4}{self.b2}{self.b0} Banned !')
                     sleep(3)
-            except IndexError:
-                print(f'{self.b1}{self.b3}{self.b2}{self.b0} Done Delete All Videos !')
+            except IndexHata:
+                print(f'{self.b1}{self.b3}{self.b2}{self.b0} Başarılı Delete All Videos !')
                 sleep(4)
                 IGBoxO0Dev().HomeScreen()
 
@@ -1100,12 +1098,12 @@ class IGBoxO0Dev():
                 start = requests.post(url1,headers=hed1)
                 
                 if '"status":"ok"' in start.text:
-                    print(f'{self.b1}{self.b3}{self.b2}{self.b0} Deleted Done => {foothr} || Sleep (16) Seconds')
+                    print(f'{self.b1}{self.b3}{self.b2}{self.b0} Deleted Başarılı => {foothr} || Sleep (16) Seconds')
                     sleep(16)
                 else:
                     print(f'{self.b1}{self.b4}{self.b2}{self.b0} Banned ! ')
-            except IndexError:
-                print(f'{self.b1}{self.b3}{self.b2}{self.b0} All Message Was Deleted') # FREE Tool By @O0Dev (Telegram channel)
+            except IndexHata:
+                print(f'{self.b1}{self.b3}{self.b2}{self.b0} All Message Was Deleted') # Telegram @shadoarsivim
                 IGBoxO0Dev().HomeScreen()
 
     def public_email(self):
@@ -1143,7 +1141,7 @@ class IGBoxO0Dev():
                 print(f'{self.b1}{self.b3}{self.b2}{self.b0} Email Not Found')
                 sleep(8)
         except:
-            print(f'{self.b1}{self.b4}{self.b2}{self.b0} Some Error !!')
+            print(f'{self.b1}{self.b4}{self.b2}{self.b0} Some Hata !!')
             sleep(3)
             IGBoxO0Dev().HomeScreen()
 
@@ -1204,17 +1202,17 @@ class IGBoxO0Dev():
                 if f'{user}' in response:
                     self.w +=1
                     os.system('cls' if os.name == 'nt' else 'clear')
-                    print(f'{self.bb}\n{self.b1}{self.b5}{self.b2}{self.b0} Done : {self.w}\n{self.b1}{self.b5}{self.b2}{self.b0} Bad : {hb}')
+                    print(f'{self.bb}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarılı : {self.w}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarısız : {hb}')
                     sleep(7)
                 else:
                     hb +=1
                     os.system('cls' if os.name == 'nt' else 'clear')
-                    print(f'{self.bb}\n{self.b1}{self.b5}{self.b2}{self.b0} Done : {self.w}\n{self.b1}{self.b5}{self.b2}{self.b0} Bad : {hb}')
+                    print(f'{self.bb}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarılı : {self.w}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarısız : {hb}')
                     sleep(7)
             except:
                 hp +=1
                 os.system('cls' if os.name == 'nt' else 'clear')
-                print(f'{self.bb}\n{self.b1}{self.b5}{self.b2}{self.b0} Done : {self.w}\n{self.b1}{self.b5}{self.b2}{self.b0} Bad : {hb}')
+                print(f'{self.bb}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarılı : {self.w}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarısız : {hb}')
                 sleep(7)
 
     def change_pass(self):
@@ -1270,18 +1268,18 @@ class IGBoxO0Dev():
                 if change == '{"status":"ok"}':
                     self.r +=1
                     os.system('cls' if os.name == 'nt' else 'clear')
-                    print(f'{self.bb}\n{self.b1}{self.b5}{self.b2}{self.b0} Done : {self.r}\n{self.b1}{self.b5}{self.b2}{self.b0} Bad : {hv}')
+                    print(f'{self.bb}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarılı : {self.r}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarısız : {hv}')
                     sleep(7)
                     open('changed.txt','a').write(f'{user}:{new_pass}\n')
                 else:
                     hv +=1
                     os.system('cls' if os.name == 'nt' else 'clear')
-                    print(f'{self.bb}\n{self.b1}{self.b5}{self.b2}{self.b0} Done : {self.r}\n{self.b1}{self.b5}{self.b2}{self.b0} Bad : {hv}')
+                    print(f'{self.bb}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarılı : {self.r}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarısız : {hv}')
                     sleep(7)
             except:
                 hv +=1
                 os.system('cls' if os.name == 'nt' else 'clear')
-                print(f'{self.bb}\n{self.b1}{self.b5}{self.b2}{self.b0} Done : {self.r}\n{self.b1}{self.b5}{self.b2}{self.b0} Bad : {hv}')
+                print(f'{self.bb}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarılı : {self.r}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarısız : {hv}')
                 sleep(7)
         print(f'{self.b1}{self.b3}{self.b2}{self.b0} User:Password => O0Dev//changed.txt')
         sleep(7)
@@ -1307,7 +1305,7 @@ class IGBoxO0Dev():
             except:
                 pass
 
-        print(f'{self.b1}{self.b3}{self.b2}{self.b0} Done Sort your combo :)')
+        print(f'{self.b1}{self.b3}{self.b2}{self.b0} Başarılı Sort your combo :)')
         sleep(1.5)
         print(f'{self.b1}{self.b3}{self.b2}{self.b0} Users => users.txt')
         print(f'{self.b1}{self.b3}{self.b2}{self.b0} Pass => pass.txt')
@@ -1373,9 +1371,9 @@ class IGBoxO0Dev():
                     print(f'{self.b1}{self.b3}{self.b2}{self.b0} Working for Increase [({self.g}) from ({Len})]')
                     sleep(ss)
                 else:
-                    print(f'{self.b1}{self.b4}{self.b2}{self.b0} Some Error Happened !')
+                    print(f'{self.b1}{self.b4}{self.b2}{self.b0} Some Hata Happened !')
             except:
-                print(f'{self.b1}{self.b4}{self.b2}{self.b0} Some Error Happened !')
+                print(f'{self.b1}{self.b4}{self.b2}{self.b0} Some Hata Happened !')
 
         for target in famous:
             idd = IGBoxO0Dev().get_id(target)
@@ -1410,9 +1408,9 @@ class IGBoxO0Dev():
                     print(f'{self.b1}{self.b3}{self.b2}{self.b0} Clean [({self.k}) from ({Len})]')
                     sleep(ss)
                 else:
-                    print(f'{self.b1}{self.b4}{self.b2}{self.b0} Some Error Happened !')
+                    print(f'{self.b1}{self.b4}{self.b2}{self.b0} Some Hata Happened !')
             except:
-                print(f'{self.b1}{self.b4}{self.b2}{self.b0} Some Error Happened !')
+                print(f'{self.b1}{self.b4}{self.b2}{self.b0} Some Hata Happened !')
         
     def post_note(self):
         os.system('cls' if os.name == 'nt' else 'clear')
@@ -1491,15 +1489,15 @@ class IGBoxO0Dev():
 
             postn = requests.post(url2,headers=headers,data=data2)
             if '"status":"ok"' in postn.text:
-                print(f'{self.b1}{self.b3}{self.b2}{self.b0} Done Post New Note')
+                print(f'{self.b1}{self.b3}{self.b2}{self.b0} Başarılı Not Gönderildi')
                 sleep(3)
                 IGBoxO0Dev().HomeScreen()
             elif 'Note text too large' in postn.text:
-                print(f'{self.b1}{self.b4}{self.b2}{self.b0} Text too large, reduce it')
+                print(f'{self.b1}{self.b4}{self.b2}{self.b0} Yazı çok uzun kısalt biraz')
                 sleep(3)
                 IGBoxO0Dev().HomeScreen()
             elif postn.status_code== 404:
-                print(f'{self.b1}{self.b4}{self.b2}{self.b0} Some Errors ! Try Again later')
+                print(f'{self.b1}{self.b4}{self.b2}{self.b0} Hata: Tekrar deneyiniz')
                 sleep(4)
                 IGBoxO0Dev().HomeScreen()
             else:
@@ -1508,7 +1506,7 @@ class IGBoxO0Dev():
                 IGBoxO0Dev().HomeScreen()
 
         elif '"error_type":"bad_password"' in login.text:
-            print(f'{self.b1}{self.b4}{self.b2}{self.b0} Bad password')
+            print(f'{self.b1}{self.b4}{self.b2}{self.b0} Şifre Yanlış')
             sleep(4)
             IGBoxO0Dev().HomeScreen()
         elif '"Please wait a few minutes before you try again."' in login.text:
@@ -1523,5 +1521,5 @@ class IGBoxO0Dev():
 IGBoxO0Dev().CheckFiles()
 
 
-# FREE Tool By @O0Dev (Telegram channel)
+# Telegram @shadoarsivim
 # All rights reserved for @O0Dev (Telegram channel) 2022 | Coder : Osama A.M.Y 
