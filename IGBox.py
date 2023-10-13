@@ -67,7 +67,7 @@ class IGBoxO0Dev():
             print('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
             print(f"""
 {self.b1}1{self.b2}{self.b0} Şikayet Başlat [Profil]
-{self.b1}2{self.b2}{self.b0} Auto Follow User From list
+{self.b1}2{self.b2}{self.b0} Listeden Kullanıcıyı Otomatik Takip Et
 {self.b1}3{self.b2}{self.b0} Otomatik Yorum
 {self.b1}4{self.b2}{self.b0} Otomatik Hikayeleri İzle
 {self.b1}5{self.b2}{self.b0} Otomatik İnstagram Post Paylaş
@@ -180,11 +180,11 @@ class IGBoxO0Dev():
                 elif ('phone_number') in Secure['step_data']:
                     mode.append('[0] Phone')
                 else:
-                    print(f'{self.b1}{self.b4}{self.b2}{self.b0} Hata, Try Again')
+                    print(f'{self.b1}{self.b4}{self.b2}{self.b0} Hata, Tekrar Deneyin')
                     sleep(3)
                     IGBoxO0Dev().HomeScreen()
             except:
-                print(f'{self.b1}{self.b4}{self.b2}{self.b0} Hata, Try Again')
+                print(f'{self.b1}{self.b4}{self.b2}{self.b0} Hata, Tekrar Deneyin')
                 sleep(3)
                 IGBoxO0Dev().HomeScreen()
 
@@ -212,12 +212,12 @@ class IGBoxO0Dev():
             if 'logged_in_user' in Send_Code:
                 return logincookies
             else:
-                print(f'{self.b1}{self.b4}{self.b2}{self.b0} Hata Code')
+                print(f'{self.b1}{self.b4}{self.b2}{self.b0} Hata Kod')
                 sleep(3)
                 IGBoxO0Dev().HomeScreen()
 
         else:
-            print(f'{self.b1}{self.b4}{self.b2}{self.b0} Hata in Login with ur Account')
+            print(f'{self.b1}{self.b4}{self.b2}{self.b0} Hesabınızla Giriş Yaparken Hata')
             print(login.text)
             sleep(3)
             IGBoxO0Dev().HomeScreen()
@@ -739,8 +739,8 @@ class IGBoxO0Dev():
     def Auto_post(self):
         os.system('cls' if os.name == 'nt' else 'clear')
         print(self.bb)
-        user = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Enter UserName : ')
-        pasw = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Enter Password : ')
+        user = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Kullanıcı Adı Giriniz : ')
+        pasw = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Şifre Giriniz : ')
         login = IGBoxO0Dev().Insta_login(user,pasw)
 
         coo = login.get_dict()
@@ -817,7 +817,7 @@ class IGBoxO0Dev():
                     print(f'{self.bb}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarılı : {self.p}\n{self.b1}{self.b5}{self.b2}{self.b0} Başarısız : {hn}')
                     sleep(10)
         except:
-            print(f'{self.b1}{self.b4}{self.b2}{self.b0} Some Hatas !!')
+            print(f'{self.b1}{self.b4}{self.b2}{self.b0} Bazı Hatalar !!')
             sleep(3)
             IGBoxO0Dev().HomeScreen()
 
@@ -851,25 +851,25 @@ class IGBoxO0Dev():
         }
         req  = requests.post(url,headers=head,data=dat).json()['message']
         if req == 'checkpoint_required':
-            print(f'{self.b1}{self.b3}{self.b2}{self.b0} Email Linked with instagram')
+            print(f'{self.b1}{self.b3}{self.b2}{self.b0} Instagram ile bağlantılı e-posta')
             sleep(6)
         elif req == 'No users found':
-            print(f'{self.b1}{self.b4}{self.b2}{self.b0} Email Not Linked with instagram')
+            print(f'{self.b1}{self.b4}{self.b2}{self.b0} E-postanın instagram ile bağlantısı yok')
             sleep(4)
             IGBoxO0Dev().HomeScreen()
         else:
-            print(f'{self.b1}{self.b4}{self.b2}{self.b0} Hata !!, Try Again later')
+            print(f'{self.b1}{self.b4}{self.b2}{self.b0} Hata !!, Tekrar Deneyiniz')
             sleep(4)
             IGBoxO0Dev().HomeScreen()
         
     def users_word(self):
         os.system('cls' if os.name == 'nt' else 'clear')
         print(self.bb)
-        user = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Enter UserName : ')
-        pasw = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Enter Password : ')
+        user = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Kullanıcı Adı Giriniz : ')
+        pasw = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Şifre Giriniz : ')
         login = IGBoxO0Dev().Insta_login(user,pasw)
 
-        words = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Enter Words Like (love-moon-iraq) : ')
+        words = input(f'{self.b1}{self.b5}{self.b2}{self.b0} (love-moon-iraq) Tarzında Kelime Giriniz : ')
         for w in words.split('-'):
             w = w.replace(' ','')
             url = f'https://www.instagram.com/web/search/topsearch/?context=blended&query={w}&rank_token=0.43773004634682566&include_reel=true'
@@ -885,8 +885,8 @@ class IGBoxO0Dev():
     def users_user(self):
         os.system('cls' if os.name == 'nt' else 'clear')
         print(self.bb)
-        user = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Enter UserName : ')
-        pasw = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Enter Password : ')
+        user = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Kullanıcı Adı Giriniz : ')
+        pasw = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Şifre Giriniz : ')
         login = IGBoxO0Dev().Insta_login(user,pasw)
 
         coo = login.get_dict()
@@ -905,7 +905,7 @@ class IGBoxO0Dev():
         else:
             option = 'followers'
         
-        count = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Enter Count Of Users : ')
+        count = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Kullanıcı Sayısını Girin : ')
         url = f'https://i.instagram.com/api/v1/friendships/{idd}/{option}/?count={count}'
 
         hed = {
@@ -940,8 +940,8 @@ class IGBoxO0Dev():
     def del_flow(self):
         os.system('cls' if os.name == 'nt' else 'clear')
         print(self.bb)
-        user = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Enter UserName : ')
-        pasw = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Enter Password : ')
+        user = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Kullanıcı Adı Giriniz : ')
+        pasw = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Şifre Giriniz : ')
         login = IGBoxO0Dev().Insta_login(user,pasw)
 
         coo = login.get_dict()
@@ -982,16 +982,16 @@ class IGBoxO0Dev():
                 
                 Başarılı = requests.post(url,headers=hed1)
                 
-                if '"status":"ok"' in Başarılı.text:
-                    print(f'{self.b1}{self.b3}{self.b2}{self.b0} Deleted username => {foou} || Sleep (16) Seconds')
+                if '"status":"ok"' in done.text:
+                    print(f'{self.b1}{self.b3}{self.b2}{self.b0} Silinen kullanıcı => {foou} || (16) Saniye Sonra Uyku')
                     sleep(16)
-                elif 'Please' in Başarılı.text:
-                    print(f'{self.b1}{self.b4}{self.b2}{self.b0} Banned !!')
+                elif 'Please' in done.text:
+                    print(f'{self.b1}{self.b4}{self.b2}{self.b0} Ban yedi!')
                 else:
                     IGBoxO0Dev().HomeScreen()
 
-            except IndexHata:
-                print(f'{self.b1}{self.b4}{self.b2}{self.b0} No Accounts yet')
+            except IndexError:
+                print(f'{self.b1}{self.b4}{self.b2}{self.b0} Henüz Hesap Yok')
                 sleep(4)
                 IGBoxO0Dev().HomeScreen()
         
@@ -999,8 +999,8 @@ class IGBoxO0Dev():
         alll = 0
         os.system('cls' if os.name == 'nt' else 'clear')
         print(self.bb)
-        user = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Enter UserName : ')
-        pasw = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Enter Password : ')
+        user = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Kullanıcı Adı Giriniz : ')
+        pasw = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Şifre Giriniz : ')
         login = IGBoxO0Dev().Insta_login(user,pasw)
 
         coo = login.get_dict()
@@ -1046,7 +1046,7 @@ class IGBoxO0Dev():
                 else:
                     print(f'{self.b1}{self.b4}{self.b2}{self.b0} Banned !')
                     sleep(3)
-            except IndexHata:
+            except IndexError:
                 print(f'{self.b1}{self.b3}{self.b2}{self.b0} Başarılı Delete All Videos !')
                 sleep(4)
                 IGBoxO0Dev().HomeScreen()
@@ -1055,8 +1055,8 @@ class IGBoxO0Dev():
         alll = 0
         os.system('cls' if os.name == 'nt' else 'clear')
         print(self.bb)
-        user = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Enter UserName : ')
-        pasw = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Enter Password : ')
+        user = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Kullanıcı Adı Giriniz : ')
+        pasw = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Şifre Giriniz : ')
         login = IGBoxO0Dev().Insta_login(user,pasw)
 
         coo = login.get_dict()
@@ -1102,15 +1102,15 @@ class IGBoxO0Dev():
                     sleep(16)
                 else:
                     print(f'{self.b1}{self.b4}{self.b2}{self.b0} Banned ! ')
-            except IndexHata:
+            except IndexError:
                 print(f'{self.b1}{self.b3}{self.b2}{self.b0} All Message Was Deleted') # Telegram @shadoarsivim
                 IGBoxO0Dev().HomeScreen()
 
     def public_email(self):
         os.system('cls' if os.name == 'nt' else 'clear')
         print(self.bb)
-        user = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Enter UserName : ')
-        pasw = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Enter Password : ')
+        user = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Kullanıcı Adı Giriniz : ')
+        pasw = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Şifre Giriniz : ')
         login = IGBoxO0Dev().Insta_login(user,pasw)
 
         coo = login.get_dict()
@@ -1315,8 +1315,8 @@ class IGBoxO0Dev():
         os.system('cls' if os.name == 'nt' else 'clear')
         print(self.bb)
 
-        user = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Enter UserName : ')
-        pasw = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Enter Password : ')
+        user = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Kullanıcı Adı Giriniz : ')
+        pasw = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Şifre Giriniz : ')
         login = IGBoxO0Dev().Insta_login(user,pasw)
         coo = login.get_dict()
         cookie = f"sessionid={coo['sessionid']};ds_user_id={coo['ds_user_id']};csrftoken={coo['csrftoken']};"
@@ -1416,8 +1416,8 @@ class IGBoxO0Dev():
         os.system('cls' if os.name == 'nt' else 'clear')
         print(self.bb)
 
-        user = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Enter UserName : ')
-        pasw = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Enter Password : ')
+        user = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Kullanıcı Adı Giriniz : ')
+        pasw = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Şifre Giriniz : ')
 
         enlist ='QAZ123WSX456EDC789RFV012TGV345YHBUJN678IKLPO0'
         uud = str(str(''.join((random.choice(enlist) for i in range(8))))+'-'+str(''.join((random.choice(enlist) for i in range(4))))+'-'+str(''.join((random.choice(enlist) for i in range(4))))+'-'+str(''.join((random.choice(enlist) for i in range(4))))+'-'+str(''.join((random.choice(enlist) for i in range(12)))))
