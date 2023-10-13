@@ -63,7 +63,7 @@ class IGBoxO0Dev():
         while True:
             os.system('cls' if os.name == 'nt' else 'clear')
             print(self.bb)
-            print(f'{self.b1}{self.b3}{self.b2}{self.b0} Coded By Osama A.M.Y || Telegram: {self.t}')
+            print(f'{self.b1}{self.b3}{self.b2}{self.b0} Coded By Osama A.M.Y || Telegram: @shadoarsivim')
             print('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
             print(f"""
 {self.b1}1{self.b2}{self.b0} Şikayet Başlat [Profil]
@@ -85,7 +85,7 @@ class IGBoxO0Dev():
 {self.b1}17{self.b2}{self.b0} Yeni Not Gönder 
 {self.b1}99{self.b2}{self.b0} Çıkış
         """)
-            tool = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Enter Num of Tool > ')
+            tool = input(f'{self.b1}{self.b5}{self.b2}{self.b0} Hangi Toolu Çalıştarayım > ')
             if tool == '1':
                 self.vip_Report()
             elif tool == '2':
